@@ -1,0 +1,88 @@
+// brandbar
+.brand{
+    background-color: $primary;
+    margin-bottom: 80px;
+    @include mobile{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        li{
+            margin-right: 28px;
+            a{
+                color: $white;
+                padding: 14px 0;
+                &:hover{
+                    color: $lightgray;
+                }
+            }
+
+        }
+    }
+}
+
+
+// productlist
+.productlist{
+    margin-top: $px-8*5;
+    .container{
+        padding: 0;
+        @include mobile{
+            padding: 0 7.5px;
+        }
+    }
+}
+
+.pcard{
+    h4{
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    p{
+        font-size: $px-8*2;
+        &.price{
+            margin-bottom: 0px;
+        }
+        .delete{
+            color: $secondary;
+            margin-left: $px-8;
+            text-decoration:line-through;
+        }
+    }
+}
+.collect{
+    display: flex;
+    margin-bottom: 58px;
+    @include mobile{
+        margin-bottom: 30px;
+    }
+
+    a{
+        font-size: 24px;
+        color: $primary;
+        margin-right: $px-8;
+    }
+}
+
+
+// pagebar
+.pagebar{
+    margin-bottom: $mb;
+    display: flex;
+    width: fit-content;
+    @include mobile{
+        margin-bottom: $smb;
+    }
+    
+    li{
+        padding: 0 10px;
+    }
+    a{
+        &:hover, &:focus{
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,315 @@
+// main
+body{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+    transition: all 0.3s;
+}
+h1,h2{
+    font-size: $px-8*5;
+    font-weight: bold;
+    line-height: 1.2;
+}
+h3{
+    font-size: $px-8*4;
+    font-weight: bold;
+    margin-bottom: $px-8;
+}
+h4,h5{
+    font-size: $px-8*3;
+    font-weight: 600;
+    margin-bottom: $px-8;
+}
+p{
+    font-weight: 300;
+}
+a{
+    transition: all 0.3s;
+}
+
+.container{
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.seemore{
+    width: fit-content;
+    color: $primary;
+    font-weight: bold;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.btn{
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid #000;
+    &:hover{
+        background-color: rgb(0, 0, 0, 0.7);
+    }
+}
+.img-pc{
+    @include mobile{
+        display: none;
+    }
+}
+.img-mobile{
+    display: none;
+    @include mobile{
+        display: block;
+    }
+}
+
+
+// header
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: $white;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            padding: 0 20px;
+        }
+
+    }
+    h1{
+        padding: 9px 0;
+        a{
+            background-image: url("https://upload.cc/i1/2021/07/14/yrRXPb.png");
+            width: 128px;
+            height: 38px;
+            @include logo;
+        }
+    }
+
+}
+// menu
+.menu{
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1s;
+        margin-top: 1px;
+        position: absolute;
+        z-index: 100;
+        top: 55px;
+        left: 0;
+        right: 0;
+        background-color: #707070;
+    }
+    li{
+        padding-left: $px-8*4;
+        @include mobile{
+            border-bottom: 1px solid $white;
+            padding-left: 0;
+        }
+        a{
+            color: $secondary;
+            padding: $px-8*2 0;
+            @include mobile{
+                color: $white;
+                text-align: center;
+                padding-left: 0;
+                &:hover{
+                    background: rgb(0, 0, 0,0.3);
+                }
+            }
+
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+    .hidden{
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+    .change{
+        @include mobile{
+            display: none;
+        }
+    }
+}
+.showicon{
+    display: none;
+    @include mobile{
+        display: flex;
+    }
+}
+.showcart{
+    position: relative;
+    .material-icons{
+        color: $secondary;
+    }
+    .shopping-num{
+        position: absolute;
+        width: 16px;
+        top: 12px;
+        left: $px-8*2;
+
+        p{
+            color: $white;
+            background-color: $primary;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.1;
+            text-align: center;
+        }
+    }
+    @include mobile{
+        @include vertical-center;
+    }
+}
+.showmenu{
+    .material-icons{
+        color: $secondary;
+        font-size: 40px !important;
+        margin-left: 20px;
+    }
+    @include mobile{
+        @include vertical-center;
+    }
+}
+.menu-show .menu{
+    @include mobile{
+        max-height: 350px
+    }
+}
+
+
+// subscribe
+.subscribe-bg{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
+    background-size: 2000px 1900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    @include ipad{
+        background-size: 800px 770px;
+    }
+    @include iphone8plus {
+        background-size: 600px 650px;
+        background-position: 0px -35px;
+    }
+    @include iphone5{
+        background-size: 500px 500px;
+        background-position: 0px -50px;
+        padding-top: 200px;
+        padding-bottom: 50px;
+        height: 400px;
+    }
+
+    .container{
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+    }
+    .subscribe{
+        margin-bottom: 112px;
+        @include iphone5{
+            margin-bottom: $px-8*2;
+        }
+    }
+
+    p{
+        color: $secondary;
+        font-size: $px-8*4;
+        font-weight: 600;
+        margin-bottom: 20px;
+        @include iphone5{
+            font-size: $px-8*3;
+        }
+    }
+    .inputtext{
+        display: flex;
+    }
+    input{
+        display: block;
+        border: 2px solid $primary;
+        padding: 20px 10px;
+        @include iphone8plus {
+            font-size: $px-8*2;
+        }
+    }
+    .email{
+        width: 65%;
+        border-radius: 4px 0 0 4px;
+    }
+    .subscribebt{
+        width: 35%;
+        color: $white;
+        font-size: $px-8*2;
+        border-radius: 0 4px 4px 0;
+        background-color: $primary;
+        cursor: pointer;
+        &:hover{
+            background-color: #4d3300;
+            border-color: #4d3300;
+        }
+    }
+}
+
+
+// footer
+.footer{
+    background-color: $primary;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerlogo{
+        display: flex;
+        @include mobile{
+            width: 100%;
+            justify-content: space-between;
+        }
+        @include iphone5{
+            text-align: center;
+            justify-content: center;
+        }
+
+        a{
+            width: 128px;
+            height: 38px;
+            background-image: url("https://upload.cc/i1/2021/07/15/fLXxF4.png");
+            @include logo;
+            margin-top: 20px;
+            @include iphone5{
+                display: none;
+            }
+        }
+        p{
+            color: $white;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 32px 0;
+            margin-left: 20px;
+            @include iphone8plus {
+                padding: 0; 
+            }
+        }
+    }
+    .footerlist{
+        display: flex;
+        @include mobile{
+            display: none;
+        }
+        a{
+            color: $white;
+            padding: 28px 0;
+            margin-left: $px-8*4;
+            &:hover{
+                color: #000;
+                font-weight: bolder;
+            }
+        }
+    }
+}

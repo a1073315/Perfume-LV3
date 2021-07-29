@@ -1,0 +1,65 @@
+// login
+.login{
+    margin-top: $px-8*5;
+    margin-bottom: 82px;
+    @include mobile{
+        margin-bottom: 106px;
+    }
+}
+.loginimg{
+    margin-bottom: 28px;
+}
+.logintext{
+    @include vertical-center;
+
+    h3{
+        margin-bottom: $px-8*1.5;
+    }
+}
+
+.loginform{
+    margin-bottom: $px-8*2;
+    .loginform-group{
+        margin-bottom: 20px;
+    
+        label,input{
+            display: block;
+            width: 100%;
+        }
+        label{
+            color: #212529;
+            margin-bottom: $px-8/2;
+        }
+        input{
+            border: 1px solid $lightgray;
+            border-radius: 4px;
+            padding: 5px 12px 6px;
+        }
+    
+    }
+}
+.d-flex .seemore{
+    padding-top: $px-8;
+}
+.login-button{
+    line-height: 1.2;
+    padding: 8px 16px;
+    border: 1px solid $primary;
+    border-radius: 4px;
+}
+.login-registerbt{
+    color: $primary;
+    margin-right: $px-8;
+    &:hover{
+        color: $white;
+        background-color: $primary;
+    }
+}
+.login-resetbt{
+    color: $white;
+    background-color: $primary;
+    &:hover{
+        background-color: #4d3300;
+        border-color: #4d3300;
+    }
+}

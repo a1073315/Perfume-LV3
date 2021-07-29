@@ -1,0 +1,35 @@
+@mixin logo {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+@mixin ipad {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin iphone8plus {
+    @media (max-width:414px) {
+        @content;
+    }
+}
+
+@mixin iphone5 {
+    @media (max-width:370px) {
+        @content;
+    }
+}

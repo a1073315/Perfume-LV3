@@ -1,0 +1,190 @@
+// banner
+.banner{
+    margin-bottom: $mb;
+    background-image: url("https://images.unsplash.com/photo-1588159343745-445ae0b16383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1789&q=80");
+    background-size: 2062px 1166px;
+    background-position: -150px -100px;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    height: 870px;
+    @include mobile{
+        margin-bottom: $smb;
+        @include vertical-center;
+        background-position: -80px 20px;
+        background-size: 1062px 700px;
+        height: 480px;
+    }
+    @include iphone8plus {
+        background-position: -80px 20px;
+        background-size: 940px 535px;
+    }
+    .container{
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .text{
+        color: $white;
+
+        h2{
+            margin-bottom: $px-8*2;
+            @include iphone8plus {
+                font-size: $px-8*4;
+            }
+        }
+        p{
+            font-size: $px-8*3;
+            font-weight: normal;
+            margin-bottom: $px-8*2;
+            @include iphone8plus {
+                font-size: 20px;
+            }
+        }
+        .shopbt{
+            color: $white;
+            border: 2px solid $white;
+            padding: 7px 0;
+            font-size: 28px;
+        }
+    }
+}
+
+
+// content
+.content{
+    margin-bottom: $mb;
+    @include iphone8plus {
+        margin-bottom: $smb;
+    }
+
+    img{
+        @include mobile{
+            margin-bottom: $px-8;
+        }
+    }
+    .content-text{
+        @include vertical-center;
+        .text{
+            @include mobile{
+                margin-bottom: $px-8*4;
+            }
+
+            p{
+                margin-bottom: $px-8*2;
+                @include mobile{
+                    margin-bottom: $px-8;
+                }
+            }
+        }
+
+    }
+    .list{
+        @include vertical-center;
+        list-style-type:decimal;
+        list-style-position:inside;
+
+        li::marker{
+            font-size: $px-8*3;
+            font-weight: 600;
+        }
+
+        p{
+            margin-bottom: 52px;
+            @include iphone8plus {
+                margin-bottom: 20px;
+            }
+        }
+
+
+    }
+    .trainingbt{
+        font-size: 20px;
+        font-weight: normal;
+        padding: 13px 0;
+        &:hover{
+            color: $white;
+        }
+    }
+}
+
+// product
+.product{
+    margin-bottom: $mb;
+    background-color: $lightgray;
+    padding: 40px 0;
+    @include iphone8plus {
+        margin-bottom: $smb;
+        padding: $px-8*4 0 $px-8/2 0;
+    }
+}
+.product-card{
+    @include mobile{
+        margin-bottom: $px-8*4;
+    }
+    a{
+        &:hover{
+            margin-top: -10px;
+            @include mobile{
+                margin-top: 0px;
+            }
+        }
+        img{
+            margin-bottom: $px-8;
+        }
+        p{
+            font-size: $px-8*2;
+            margin-bottom: $px-8*2;
+            &.price{
+                margin-bottom: 0px;
+            }
+            .delete{
+                color: $secondary;
+                margin-left: $px-8;
+                text-decoration:line-through;
+            }
+        }
+        .imgbox{
+            position: relative;
+            .soldout{
+                @include vertical-center;
+                background-color: rgb(0, 0, 0, 0.3);
+                font-weight: bold;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+
+                p{
+                    font-weight: 600;
+                    color: $white;
+                    text-align: center;
+                    font-size: $px-8*3;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+// recycle
+.recycle{
+    margin-bottom: $mb;
+    @include iphone8plus {
+        margin-bottom: $smb;
+    }
+    img{
+        @include ipad{
+            margin-bottom: $px-8;
+        }
+    }
+    .re-text{
+        @include vertical-center;
+
+        p{
+            margin-bottom: $px-8*2;
+        }
+    }
+}
+

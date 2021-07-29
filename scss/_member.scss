@@ -1,0 +1,125 @@
+// member
+.member{
+    margin-bottom: $mb;
+    margin-top: $px-8*5;
+    color: #848484;
+    @include mobile{
+        margin-bottom: 20px;
+    }
+    // left
+    h2{
+        font-size: 20px;
+        margin-bottom: 28px;
+        @include mobile{
+            display: none;
+        }
+    }
+    a{
+        width: fit-content;
+        color: #848484;
+        margin-bottom: $px-8*3;
+        border-bottom: 2px solid $white;
+        &:hover,&:focus{
+            border-bottom: 2px solid $primary;
+        }
+    }
+    h3{
+        color: #000;
+        padding-bottom: $px-8;
+        margin-bottom: $px-8*2;
+        border-bottom: 1px solid #818A91;
+    }
+    // right
+    input,select{
+        padding: $px-8;
+        line-height: 1;
+    }
+    .input-1{
+        max-width: 350px;
+    }
+    .input-2{
+        max-width: 160px;
+        @include mobile{
+            max-width: 80px;
+        }
+    }
+    .input-3{
+        max-width: 160px;
+        @include mobile{
+            max-width: 170px;
+        }
+    }
+    // checkbox
+    input[type=checkbox] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        vertical-align: -0.15em;
+        position: relative;
+    }
+    input[type=checkbox]:after {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 0;
+        content: " ";
+        display: inline-block;
+        visibility: visible;
+        padding: 0 3px;
+        border-radius: 3px;
+    }
+    input[type=checkbox]:checked:after {
+        content: "✓";
+        font-size: 12px;
+        font-weight: bold;
+        background-color: $primary;
+        color: #fff;
+    }
+    // modifybtn
+    .modifybtn{
+        color: $white;
+        background-color: $primary;
+        border: 1px solid $primary;
+        &:hover{
+            background-color: #4d3300;
+            border-color: #4d3300;
+        }
+    }
+}
+// modifyinfor
+.modifyinfor{
+    margin-bottom: 48px;
+    .row{
+        margin-bottom: 20px;
+    }
+}
+// modifypwd
+.modifypwd{
+    .row{
+        margin-bottom: 20px;
+    }
+}
+
+
+// membernum
+.membernum{
+    @include mobile{
+        margin-bottom: $smb;
+    }
+
+    h4{
+        color: #000;
+        font-size: 20px;
+        .material-icons{
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: 2%;
+        }
+    }
+
+    p{
+        font-size: 14px;
+        color: #A5A5A5;
+    }
+}
